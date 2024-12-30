@@ -24,11 +24,12 @@ export default function LoginPage() {
         setAccessToken(`Bearer ${user.access_token}`);
         router.push("/dashboard");
       }
-    } catch (error: any) {
+    } catch (error) {
       console.error(error);
       setErrorMessage(
-        error.response?.data?.message || 
-        "Las credenciales ingresadas no son válidas"
+        error instanceof Error 
+          ? error.message 
+          : "Las credenciales ingresadas no son válidas"
       );
     }
   };

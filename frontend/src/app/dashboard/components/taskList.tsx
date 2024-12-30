@@ -58,6 +58,7 @@ export default function TaskList() {
       setShowForm(false);
       setFormData({ title: '', description: '' });
       loadTasks();
+      console.log(response)
       setNotification({
         show: true,
         type: 'success',

@@ -1,4 +1,3 @@
-import { LogOutIcon } from "lucide-react";
 import TaskList from "./components/taskList";
 import LogoutButton from "@/components/ui/LogoutButton";
 import { AnimatePresence } from "framer-motion";

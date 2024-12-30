@@ -6,7 +6,7 @@ import { PencilIcon, TrashIcon } from "lucide-react";
 import Tooltip from '@/components/Tooltip'
 import EditTaskModal from './EditTaskModal';
 import Notification from '@/components/ui/Notification';
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function TaskCard({ _id, title, description, completed: initialCompleted, createdAt, onTaskUpdate, onTaskDelete }: Readonly<TaskCardProps>) {
     const [isCompleted, setIsCompleted] = useState(initialCompleted);
