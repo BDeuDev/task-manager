@@ -6,7 +6,7 @@ export default function KeepAlive() {
   useEffect(() => {
     const keepAlive = async () => {
       try {
-        await fetch('https://tu-url-api.com/ping');
+        await fetch(`${process.env.NEXT_PUBLIC_API_URL}/`);
       } catch (error) {
         console.error('Error en ping:', error);
       }
